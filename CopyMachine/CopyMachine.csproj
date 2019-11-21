@@ -43,11 +43,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Device.cs" />
+    <Compile Include="ICopyMachine.cs" />
+    <Compile Include="IState.cs" />
+    <Compile Include="ConsoleCopyMachine.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="States\DeviceState.cs" />
+    <Compile Include="States\PrintFromUSBState.cs" />
+    <Compile Include="States\InitialState.cs" />
+    <Compile Include="States\PrintFromWiFiState.cs" />
+    <Compile Include="States\StateBase.cs" />
+    <Compile Include="States\USBDeviceState.cs" />
+    <Compile Include="States\WiFiDeviceState.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
