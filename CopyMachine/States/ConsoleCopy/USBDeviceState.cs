@@ -4,8 +4,11 @@ namespace CopyMachine.States.ConsoleCopy
 {
     public class USBDeviceState : DeviceState
     {
-        public override void SelectDocument(CopyMachine context, string name)
+        public override void SelectDocument(CopyMachine context)
         {
+            Console.WriteLine("Enter document name:");
+            var name = Console.ReadLine();
+
             //TODO: File system operations
             //Example:
             var document = $"Title:\t{name}\nBody:\tdocument from USB device";

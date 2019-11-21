@@ -19,9 +19,9 @@ namespace CopyMachine
 
         public void EnterMoney() => State.EnterMoney(this);
 
-        public void SelectDevice(Device device) => State.SelectDevice(this, device);
+        public void SelectDevice() => State.SelectDevice(this);
 
-        public void SelectDocument(string name) => State.SelectDocument(this, name);
+        public void SelectDocument() => State.SelectDocument(this);
 
         public void PrintSelectedDocument() => State.PrintSelectedDocument(this);
 

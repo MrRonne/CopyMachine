@@ -4,8 +4,11 @@ namespace CopyMachine.States.ConsoleCopy
 {
     public class WiFiDeviceState : DeviceState
     {
-        public override void SelectDocument(CopyMachine context, string name)
+        public override void SelectDocument(CopyMachine context)
         {
+            Console.WriteLine("Enter document name:");
+            var name = Console.ReadLine();
+
             //TODO: Network and file system operations
             //Example:
             var document = $"Title:\t{name}\nBody:\tdocument from WiFi device";

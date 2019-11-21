@@ -8,7 +8,7 @@ namespace CopyMachine
         {
             try
             {
-                USBTwoDocumentsExample();
+                TwoDocumentsExample();
             }
             catch (Exception e)
             {
@@ -17,14 +17,14 @@ namespace CopyMachine
             Console.ReadKey();
         }
 
-        static void USBTwoDocumentsExample()
+        static void TwoDocumentsExample()
         {
             var copyMachine = new CopyMachine(new States.ConsoleCopy.InitialState(), 5);
             copyMachine.EnterMoney();
-            copyMachine.SelectDevice(Device.USB);
-            copyMachine.SelectDocument("Example 1");
+            copyMachine.SelectDevice();
+            copyMachine.SelectDocument();
             copyMachine.PrintSelectedDocument();
-            copyMachine.SelectDocument("Example 2");
+            copyMachine.SelectDocument();
             copyMachine.PrintSelectedDocument();
             copyMachine.ReturnRemain();
             Console.WriteLine("Profit!");

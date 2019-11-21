@@ -1,13 +1,11 @@
-﻿using System;
-
-namespace CopyMachine.States.ConsoleCopy
+﻿namespace CopyMachine.States.ConsoleCopy
 {
     public class USBPrintState : PrintState
     {
-        public override void SelectDocument(CopyMachine context, string name)
+        public override void SelectDocument(CopyMachine context)
         {
             context.State = new USBDeviceState();
-            context.State.SelectDocument(context, name);
+            context.State.SelectDocument(context);
         }
     }
 }

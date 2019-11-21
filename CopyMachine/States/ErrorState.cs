@@ -9,12 +9,12 @@ namespace CopyMachine.States
             throw new Exception("Some error");
         }
 
-        public void SelectDevice(CopyMachine context, Device device)
+        public void SelectDevice(CopyMachine context)
         {
             throw new Exception("Some error");
         }
 
-        public void SelectDocument(CopyMachine context, string name)
+        public void SelectDocument(CopyMachine context)
         {
             throw new Exception("Some error");
         }

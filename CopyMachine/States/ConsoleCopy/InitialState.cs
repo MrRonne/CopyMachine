@@ -4,8 +4,11 @@ namespace CopyMachine.States.ConsoleCopy
 {
     public class InitialState : StateBase
     {
-        public override void SelectDevice(CopyMachine context, Device device)
+        public override void SelectDevice(CopyMachine context)
         {
+            Console.WriteLine("Enter input device (USB or WiFi):");
+            if (!Enum.TryParse(Console.ReadLine(), true, out Device device))
+                throw new Exception("Wrong device name");
             switch (device)
             {
                 case Device.USB:
@@ -20,7 +23,7 @@ namespace CopyMachine.States.ConsoleCopy
             Console.WriteLine($"Selected device {device}");
         }
 
-        public override void SelectDocument(CopyMachine context, string name)
+        public override void SelectDocument(CopyMachine context)
         {
             throw new Exception("Device not selected");
         }

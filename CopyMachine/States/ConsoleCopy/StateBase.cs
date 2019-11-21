@@ -13,8 +13,8 @@ namespace CopyMachine.States.ConsoleCopy
             Console.WriteLine($"Current balance is {context.Balance}");
         }
 
-        public abstract void SelectDevice(CopyMachine context, Device device);
-        public abstract void SelectDocument(CopyMachine context, string name);
+        public abstract void SelectDevice(CopyMachine context);
+        public abstract void SelectDocument(CopyMachine context);
         public abstract void PrintSelectedDocument(CopyMachine context);
 
         public void ReturnRemain(CopyMachine context)

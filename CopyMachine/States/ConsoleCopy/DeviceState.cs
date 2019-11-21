@@ -4,7 +4,7 @@ namespace CopyMachine.States.ConsoleCopy
 {
     public abstract class DeviceState : StateBase
     {
-        public override void SelectDevice(CopyMachine context, Device device)
+        public override void SelectDevice(CopyMachine context)
         {
             throw new Exception("Device already selected");
         }
