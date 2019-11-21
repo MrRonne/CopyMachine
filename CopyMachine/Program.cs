@@ -17,6 +17,13 @@ namespace CopyMachine
             Console.ReadKey();
         }
 
+        /// <summary>
+        /// Пример входных данных:
+        /// 12
+        /// usb
+        /// doc1
+        /// doc2
+        /// </summary>
         static void TwoDocumentsExample()
         {
             var copyMachine = new CopyMachine(new States.ConsoleCopy.InitialState(), 5);
