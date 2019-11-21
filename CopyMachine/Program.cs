@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CopyMachine
 {
@@ -10,6 +6,20 @@ namespace CopyMachine
     {
         static void Main(string[] args)
         {
+            CorrectExample();
+            Console.ReadKey();
+        }
+
+        static void CorrectExample()
+        {
+            var copyMachine = new ConsoleCopyMachine(5);
+            copyMachine.EnterMoney(12);
+            copyMachine.SelectDevice(Device.USB);
+            copyMachine.SelectDocument("Example 1");
+            copyMachine.PrintSelectedDocument();
+            copyMachine.SelectDocument("Example 2");
+            copyMachine.PrintSelectedDocument();
+            copyMachine.GetRemain();
         }
     }
 }

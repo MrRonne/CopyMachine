@@ -8,7 +8,7 @@ namespace CopyMachine.States
         {
             //TODO: File system operations
             //Example:
-            var document = $"Title {name}\nBody: document from USB device";
+            var document = $"Title:\t{name}\nBody:\tdocument from USB device";
             var found = true;
 
             if (!found)

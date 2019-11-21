@@ -8,7 +8,7 @@ namespace CopyMachine.States
         {
             //TODO: Network and file system operations
             //Example:
-            var document = $"Title: {name}\nBody: document from WiFi device";
+            var document = $"Title:\t{name}\nBody:\tdocument from WiFi device";
             var found = true;
 
             if (!found)
