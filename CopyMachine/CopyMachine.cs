@@ -2,22 +2,22 @@
 
 namespace CopyMachine
 {
-    public class ConsoleCopyMachine : ICopyMachine
+    public class CopyMachine
     {
         public IState State { get; set; }
         public string SelectedDocument { get; set; }
         public uint CopyCost { get; }
         public uint Balance { get; set; }
 
-        public ConsoleCopyMachine(uint copyCost)
+        public CopyMachine(IState initialState, uint copyCost)
         {
             CopyCost = copyCost;
             Balance = 0;
             SelectedDocument = null;
-            State = new InitialState();
+            State = initialState;
         }
 
-        public void EnterMoney(uint amount) => State.EnterMoney(this, amount);
+        public void EnterMoney() => State.EnterMoney(this);
 
         public void SelectDevice(Device device) => State.SelectDevice(this, device);
 
@@ -25,6 +25,6 @@ namespace CopyMachine
 
         public void PrintSelectedDocument() => State.PrintSelectedDocument(this);
 
-        public uint GetRemain() => State.GetRemain(this);
+        public void ReturnRemain() => State.ReturnRemain(this);
     }
 }

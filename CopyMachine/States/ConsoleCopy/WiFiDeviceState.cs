@@ -1,10 +1,10 @@
 ﻿using System;
 
-namespace CopyMachine.States
+namespace CopyMachine.States.ConsoleCopy
 {
     public class WiFiDeviceState : DeviceState
     {
-        public override void SelectDocument(ICopyMachine context, string name)
+        public override void SelectDocument(CopyMachine context, string name)
         {
             //TODO: Network and file system operations
             //Example:
@@ -15,7 +15,7 @@ namespace CopyMachine.States
                 throw new Exception($"Document {name} not found");
             context.SelectedDocument = document;
             Console.WriteLine($"Selected document {name}");
-            context.State = new PrintFromWiFiState();
+            context.State = new WiFiPrintState();
         }
     }
 }

@@ -1,10 +1,10 @@
 ﻿using System;
 
-namespace CopyMachine.States
+namespace CopyMachine.States.ConsoleCopy
 {
     public class InitialState : StateBase
     {
-        public override void SelectDevice(ICopyMachine context, Device device)
+        public override void SelectDevice(CopyMachine context, Device device)
         {
             switch (device)
             {
@@ -20,12 +20,12 @@ namespace CopyMachine.States
             Console.WriteLine($"Selected device {device}");
         }
 
-        public override void SelectDocument(ICopyMachine context, string name)
+        public override void SelectDocument(CopyMachine context, string name)
         {
             throw new Exception("Device not selected");
         }
 
-        public override void PrintSelectedDocument(ICopyMachine context)
+        public override void PrintSelectedDocument(CopyMachine context)
         {
             throw new Exception("Device and document not selected");
         }

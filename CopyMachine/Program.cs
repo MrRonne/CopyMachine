@@ -6,20 +6,28 @@ namespace CopyMachine
     {
         static void Main(string[] args)
         {
-            CorrectExample();
+            try
+            {
+                USBTwoDocumentsExample();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
             Console.ReadKey();
         }
 
-        static void CorrectExample()
+        static void USBTwoDocumentsExample()
         {
-            var copyMachine = new ConsoleCopyMachine(5);
-            copyMachine.EnterMoney(12);
+            var copyMachine = new CopyMachine(new States.ConsoleCopy.InitialState(), 5);
+            copyMachine.EnterMoney();
             copyMachine.SelectDevice(Device.USB);
             copyMachine.SelectDocument("Example 1");
             copyMachine.PrintSelectedDocument();
             copyMachine.SelectDocument("Example 2");
             copyMachine.PrintSelectedDocument();
-            copyMachine.GetRemain();
+            copyMachine.ReturnRemain();
+            Console.WriteLine("Profit!");
         }
     }
 }

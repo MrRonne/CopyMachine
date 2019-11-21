@@ -44,18 +44,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Device.cs" />
-    <Compile Include="ICopyMachine.cs" />
-    <Compile Include="IState.cs" />
-    <Compile Include="ConsoleCopyMachine.cs" />
+    <Compile Include="States\ConsoleCopy\PrintState.cs" />
+    <Compile Include="States\ErrorState.cs" />
+    <Compile Include="States\IState.cs" />
+    <Compile Include="CopyMachine.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="States\DeviceState.cs" />
-    <Compile Include="States\PrintFromUSBState.cs" />
-    <Compile Include="States\InitialState.cs" />
-    <Compile Include="States\PrintFromWiFiState.cs" />
-    <Compile Include="States\StateBase.cs" />
-    <Compile Include="States\USBDeviceState.cs" />
-    <Compile Include="States\WiFiDeviceState.cs" />
+    <Compile Include="States\ConsoleCopy\DeviceState.cs" />
+    <Compile Include="States\ConsoleCopy\USBPrintState.cs" />
+    <Compile Include="States\ConsoleCopy\InitialState.cs" />
+    <Compile Include="States\ConsoleCopy\WiFiPrintState.cs" />
+    <Compile Include="States\ConsoleCopy\StateBase.cs" />
+    <Compile Include="States\ConsoleCopy\USBDeviceState.cs" />
+    <Compile Include="States\ConsoleCopy\WiFiDeviceState.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
